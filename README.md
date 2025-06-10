@@ -1,12 +1,12 @@
 # Puul Challenge - Ezequiel Bello
 
-## Setup Steps
-
 1. Start the database
 
 Run the following script to start the database using Docker:
 
     ./start-database.sh
+
+> Note: This script is designed to run on Unix-like systems (Linux or macOS). On Windows, you may need to adapt it or run it within WSL (Windows Subsystem for Linux).
 
 This command will launch the database container with the default configuration.
 
