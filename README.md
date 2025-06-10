@@ -16,7 +16,15 @@ Install the project's dependencies with:
 
     npm install
 
-3. Apply Prisma migrations
+3. Generate Prisma Client
+
+Generate the Prisma Client code based on the current schema:
+
+    npx prisma generate
+
+This step ensures that your application has the necessary client code to interact with the database.
+
+4. Apply Prisma migrations
 
 Run the defined migrations to set up the database schema:
 
@@ -24,7 +32,7 @@ Run the defined migrations to set up the database schema:
 
 This will ensure the database schema matches the models defined in Prisma.
 
-4. Start the development server
+5. Start the development server
 
 Launch the server in development mode:
 
@@ -32,7 +40,7 @@ Launch the server in development mode:
 
 The server will be listening on the port specified in your `.env` file.
 
-5. Import the Postman collection
+6. Import the Postman collection
 
 To test the available endpoints, follow these steps:
 
