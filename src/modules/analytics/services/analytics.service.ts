@@ -8,7 +8,6 @@ export class AnalyticsService {
 
   /**
    * Retrieves the top users ranked by the number of completed tasks.
-   * Optimized: Usa groupBy para contar y una sola consulta adicional para sumar costos.
    * @param limit Maximum number of users to return (default: 5)
    * @returns Array of users with completed task count and total cost
    */
