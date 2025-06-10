@@ -109,10 +109,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "GET /tasks?title=pagos&dueDate=2025-07-01&userId=1&userName=Ezequiel&userEmail=ezequiel@puul.com",
+							"raw": "http://localhost:3000/tasks?title=pagos&dueDate=2025-07-01&userId=1&userName=Ezequiel&userEmail=ezequiel@puul.com",
+							"protocol": "http",
 							"host": [
-								"GET "
+								"localhost"
 							],
+							"port": "3000",
 							"path": [
 								"tasks"
 							],
