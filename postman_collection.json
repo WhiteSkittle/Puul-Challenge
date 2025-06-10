@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "dea8deed-a49c-4b4b-beb3-bd36133d314c",
+		"name": "Pull-Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42440209"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Ezequiel Bello\",\n  \"email\": \"ezequiel@puul.com\",\n  \"role\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users?name=Ezequiel&email=ezequiel@puul.com&role=admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Ezequiel"
+								},
+								{
+									"key": "email",
+									"value": "ezequiel@puul.com"
+								},
+								{
+									"key": "role",
+									"value": "admin"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Integración de pagos\",\n  \"description\": \"Configurar pasarela de pagos con Stripe\",\n  \"estimatedHours\": 12,\n  \"dueDate\": \"2025-07-01T00:00:00.000Z\",\n  \"status\": \"active\",\n  \"cost\": 3500,\n  \"assignedUserIds\": [1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "GET /tasks?title=pagos&dueDate=2025-07-01&userId=1&userName=Ezequiel&userEmail=ezequiel@puul.com",
+							"host": [
+								"GET "
+							],
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "pagos"
+								},
+								{
+									"key": "dueDate",
+									"value": "2025-07-01"
+								},
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "userName",
+									"value": "Ezequiel"
+								},
+								{
+									"key": "userEmail",
+									"value": "ezequiel@puul.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Integración de pagos actualizada\",\n  \"description\": \"Conectar Stripe con lógica de backend\",\n  \"estimatedHours\": 14,\n  \"dueDate\": \"2025-07-05T00:00:00.000Z\",\n  \"status\": \"completed\",\n  \"cost\": 4200,\n  \"assignedUserIds\": [1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tasks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Analytics",
+			"item": [
+				{
+					"name": "Monthly Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/analytics/monthly-summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analytics",
+								"monthly-summary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/analytics/top-users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analytics",
+								"top-users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
